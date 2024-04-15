@@ -11,8 +11,9 @@
 ### END INIT INFO
 #
 # var2tmpfs.sh        This init.d script is used to start tmpfs var/dir saving and restore e.g. for a dovecot mailserver.
-# idea: https://forum-raspberrypi.de/forum/thread/4046-var-log-in-eine-art-ramdisk-auslagern-weitere-optimierungen-bezgl-logs/
+# idea: https://forum-raspberrypi.de/forum/thread/4046-var-log-in-eine-art-ramdisk-auslagern-weitere-optimierungen-bezgl-logs
 #
+
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 BASENAME=$(basename $0)
 # without dovecot index directory
