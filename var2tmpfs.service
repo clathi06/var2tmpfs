@@ -1,0 +1,15 @@
+[Unit]
+Description=Start/Stop tmpfs var/dir saving
+DefaultDependencies=no
+After=local-fs.target
+Before=basic.target
+Conflicts=umount.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/etc/init.d/var2tmpfs.sh start
+ExecStop=/etc/init.d/var2tmpfs.sh stop
+
+[Install]
+WantedBy=local-fs.target
