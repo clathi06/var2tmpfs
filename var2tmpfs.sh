@@ -46,7 +46,7 @@ function _mount() {
   [ -z "$tmpfs_size" ] && tmpfs_size="100M"
   echo "*** Mounting tmpfs /var/$1 with size $tmpfs_size"
   mount -t tmpfs tmpfs /var/$1 -o defaults,size=$tmpfs_size
-  chmod 775 /var/$1
+  chmod 777 /var/$1
 }
 
 function _umount() {
